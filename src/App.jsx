@@ -5,7 +5,7 @@ import Customhook from './Components/Customhook'
 import Register from './Components/Register'
 import Task1 from './Components/Task1'
 import ProductDetail from './Components/ProductDetail'
-import Booking from './Components/Booking'
+import Button from './Components/Button'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 <Customhook/>
 <Theme/>
 <ProductList/>
-<Booking/>
+<Button/>
  </>
   )
 }

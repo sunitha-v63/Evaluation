@@ -1,24 +1,35 @@
 import React from 'react';
+import CustomButton from './CustomButton';
+import { FaCoffee, FaPaw } from 'react-icons/fa';
 
-function Button({ label, variant = 'primary', onClick, icon }) {
-  const buttonClass = variant === 'primary' ? 'btn-primary' : 'btn-secondary';
+const Button = () => {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
 
   return (
-    <button
-      className={`btn ${buttonClass} p-3`}
-      type="button"
-      onClick={onClick}
-      style={{
-        backgroundColor: variant === 'primary' ? 'lightblue' : 'lightgreen',
-        color: 'black',
-        borderRadius: '50px',
-        outline: 'none',
-        border: 'none',
-      }}
-    >
-      {icon && <span className="me-2">{icon}</span>} {label}
-    </button>
+    <>
+      <div className="text-center my-4">
+        <h2>7.Reusable Button</h2>
+        <div className="d-flex justify-content-center gap-3">
+          <CustomButton
+            label="Button1"
+            variant="primary"
+            onClick={handleClick}
+            icon={FaPaw}
+            className="mb-2"
+          />
+          <CustomButton
+            label="Button2"
+            variant="secondary"
+            onClick={handleClick}
+            icon={FaCoffee}
+            className="mb-2"
+          />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default Button;
